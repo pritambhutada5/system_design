@@ -1,1 +1,10 @@
-fastapi
+dotenv==0.9.9
+fastapi==0.120.1
+pip ==25.2
+pydantic==2.12.3
+pydantic_core==2.41.4
+pytest==8.4.2
+python-dotenv==1.2.1
+SQLAlchemy==2.0.44
+starlette==0.48.0
+uvicorn==0.38.0

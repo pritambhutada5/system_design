@@ -1,10 +1,9 @@
-```markdown
 # FastAPI Notification System
 
-A modular, production-ready notification system built with FastAPI, supporting email notifications with 
+A modular, production-ready notification system built with FastAPI, supporting email notifications with
 click tracking, analytics, rate limiting, retries, and graceful worker management.
 
----
+***
 
 ## Features
 
@@ -19,8 +18,8 @@ click tracking, analytics, rate limiting, retries, and graceful worker managemen
 - Graceful worker startup and shutdown integrated with FastAPI lifecycle.
 - Comprehensive logging for all modules.
 
----
-```
+***
+
 ## Project Structure
 
 ```
@@ -43,7 +42,7 @@ notification_system/
 │   ├── logging/
 │   │   ├── __init__.py
 │   │   ├── logging_config.py  # Logger setup and config
-│   ├── templates/             # (Optional)     
+│   ├── templates/             # (Optional)
 │   │   └── notification_email.txt  # Email templates (Optional)
 ├── setup_user.py              # Database and test user setup script
 ├── requirements.txt           # Python dependencies
@@ -51,14 +50,13 @@ notification_system/
 ├── README.md                  # Project description
 ├── logs/
 │   └── ...                    # Log files per module
-
 ```
 
----
+***
 
 ## Getting Started
 
-## Prerequisites
+### Prerequisites
 
 - Python 3.11
 - SMTP email account (Gmail with App Password recommended) or Mailtrap for testing
@@ -66,39 +64,34 @@ notification_system/
 
 ### Installation
 
-1. Clone the repo:
+1.  Clone the repo:
 
-```bash
-    git clone https://github.com/yourusername/notification_system.git
+    ```bash
+    git clone https://github.com/pritambhutada5/system_design.git
     cd notification_system
-```
+    ```
 
-2. Install dependencies:
+2.  Install dependencies:
 
-```bash
-    pip install fastapi uvicorn sqlalchemy dotenv
-```
+    ```bash
+    pip install fastapi uvicorn sqlalchemy python-dotenv
+    ```
 
-3. Configure SMTP credentials in .env file:
+3.  Configure SMTP credentials in `.env` file:
 
-```
-    SMTP_SERVER = "smtp.gmail.com"
-    SMTP_PORT = 587
-    SMTP_USER = ""
-    SMTP_PASSWORD = ""
-    set 
-    API_KEYS = "<key>:<value>"
-```
+    ```
+    SMTP_SERVER="smtp.gmail.com"
+    SMTP_PORT=587
+    SMTP_USER=""
+    SMTP_PASSWORD=""
+    API_KEYS="<key>:<value>"
+    ```
 
-4. Add test users by running your setup scripts or shell commands.
-This script inserts test user records required for notification testing.
-If you prefer, you can also manually insert users using a database client or Python shell.
-```
+4.  Add test users by running your setup script:
 
-```bash
+    ```bash
     python setup_user.py
-```
-
+    ```
 
 ## Running the Application
 
@@ -110,34 +103,30 @@ Start the FastAPI server (worker auto-starts):
 
 Open the interactive API docs at:
 
-```bash
-  http://127.0.0.1:8000/docs
-```
+    [http://127.0.0.1:8000/docs](http://127.0.0.1:8000/docs)
 
-Use the `/notify` POST endpoint with your API key and JSON body including `email` and `message`. 
+Use the `/notify` POST endpoint with your API key and JSON body including `email` and `message`.
 The system queues notifications and sends emails asynchronously with click tracking.
-
----
-## Features in Detail
-- **Authentication & Rate Limiting**: Protect endpoints with API key and limit request rate.
-- **Worker Thread**: Processes queued notification tasks, sending emails and handling retries.
-- **Email with Click Tracking**: Emails contain unique links for tracking clicks via API.
-- **Logging & Analytics**: All activity logged with details stored in SQLite and log files.
-- **Graceful Shutdown**: Worker stops cleanly on server shutdown using sentinels.
-- **Retry Logic**: Failed sends are retried up to configurable limit.
----
-
-## Extending the System
-
-- Add richer notification templates under `templates/`.
-- Switch SMTP to popular services or integrate SMS gateways.
-- Replace SQLite with full-fledged RDBMS or NoSQL backend.
-- Add WebSocket or SSE real-time notification support.
-- Build dashboards or reports from notification analytics.
-
----
-```
 
 ***
 
-This README covers setup, usage, architecture, and extension ideas, customized for your notification FastAPI project.
+## Features in Detail
+
+-   **Authentication & Rate Limiting**: Protect endpoints with API key and limit request rate.
+-   **Worker Thread**: Processes queued notification tasks, sending emails and handling retries.
+-   **Email with Click Tracking**: Emails contain unique links for tracking clicks via API.
+-   **Logging & Analytics**: All activity logged with details stored in SQLite and log files.
+-   **Graceful Shutdown**: Worker stops cleanly on server shutdown using sentinels.
+-   **Retry Logic**: Failed sends are retried up to configurable limit.
+
+***
+
+## Extending the System
+
+-   Add richer notification templates under `templates/`.
+-   Switch SMTP to popular services or integrate SMS gateways.
+-   Replace SQLite with full-fledged RDBMS or NoSQL backend.
+-   Add WebSocket or SSE real-time notification support.
+-   Build dashboards or reports from notification analytics.
+
+---
