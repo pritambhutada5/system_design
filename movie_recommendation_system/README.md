@@ -70,7 +70,7 @@ movie_recommendation_system/
 
 Clone the repository and install dependencies:
 
-```
+```bash
 # Clone the repo
 git clone <your-repo-url>
 cd movie_recommendation_system
@@ -92,19 +92,18 @@ Run the pipeline to process data and generate the similarity matrix:
 
 ```
 # Run ingestion and training
-Note: The model files are too large for GitHub. After cloning, please run python src/models.py to generate the necessary .pkl files locally.
+Note: The model files are too large for GitHub. 
+After cloning, please run python src/models.py to generate the necessary .pkl files locally.
 
+```
 ```bash
 python src/models.py
 ```
 
-```
-*Check `logs/` to see the training progress.*
-
 ### 5. Run the Application
 Start the Streamlit server:
 
-```
+```bash
 streamlit run app.py
 ```
 
