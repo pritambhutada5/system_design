@@ -39,7 +39,7 @@ This PoC mimics a Two-Stage Recommendation Architecture (specifically the **Retr
 
 ## 📂 Project Structure
 
-```
+```text
 movie_recommendation_system/
 ├── .env                  # Environment variables (TMDB Token)
 ├── .gitignore            # Files to ignore (e.g., venv, __pycache__)
