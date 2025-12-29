@@ -92,7 +92,12 @@ Run the pipeline to process data and generate the similarity matrix:
 
 ```
 # Run ingestion and training
+Note: The model files are too large for GitHub. After cloning, please run python src/models.py to generate the necessary .pkl files locally.
+
+```bash
 python src/models.py
+```
+
 ```
 *Check `logs/` to see the training progress.*
 

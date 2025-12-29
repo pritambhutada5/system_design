@@ -2,3 +2,6 @@
 .idea/
 __pycache__/
 logs
+# Ignore processed data models
+data/processed/*.pkl
+*.pkl
