@@ -1,6 +1,10 @@
 ```markdown
 # 🎬 Movie Recommendation System (PoC)
 
+You can read the full architecture breakdown here:
+[![LinkedIn](https://www.linkedin.com/pulse/from-zero-10-billion-architecting-video-system-pritam-bhutada-hp2bf/?trackingId=fvNeae3Qw%2BqIvhh2fZuyJw%3D%3D)]
+[![Medium](https://medium.com/gitconnected/from-zero-to-10-billion-architecting-a-video-recommendation-system-f04e31bb0894)]
+
 A Content-Based Movie Recommendation System built with Python, Scikit-Learn, and Streamlit. This project implements a **Retrieval-based architecture** inspired by production recommendation systems (e.g. Netflix/YouTube)
 
 ## 📌 Overview
@@ -136,7 +140,13 @@ We use **Cosine Similarity** over Euclidean Distance because we care about the *
 *   **FastAPI Backend:** Decouple the UI from the logic by serving recommendations via a REST API.
 
 ---
+## 📸 Demo
 
+![Movie Recommendation System Demo](assets/Movie_Recommendation_System.png)
+
+*The interface showing movie recommendations based on user selection.*
+
+---
 ## 📝 License
 This project is open-source.
 ```
